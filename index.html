@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Promoção Dia dos Namorados</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: #fff0f5;
+      color: #333;
+    }
+
+    header {
+      background-color: #ff3366;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 32px;
+    }
+
+    .promo {
+      text-align: center;
+      margin: 40px 20px;
+    }
+
+    .promo h2 {
+      font-size: 28px;
+      color: #ff3366;
+    }
+
+    .promo p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    }
+
+    form input {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    form button {
+      width: 100%;
+      padding: 12px;
+      background-color: #ff3366;
+      color: white;
+      border: none;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .payment-link {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .payment-link a {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      padding: 20px;
+      color: #999;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Promoção Especial Dia dos Namorados</h1>
+  </header>
+
+  <section class="promo">
+    <h2>2 PIZZAS por R$48,90</h2>
+    <p>Aproveite a noite mais romântica com um sabor irresistível!</p>
+  </section>
+
+  <div class="container">
+    <h3>Crie sua conta</h3>
+    <form id="registerForm">
+      <input type="text" id="name" placeholder="Nome completo" required>
+      <input type="email" id="email" placeholder="E-mail" required>
+      <input type="password" id="password" placeholder="Senha" required>
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <div class="payment-link" style="display:none" id="paymentSection">
+      <p>Conta criada! Agora finalize com o pagamento:</p>
+      <a href="https://pagamento-exemplo.com/pizza48" target="_blank">Pagar R$48,90</a>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 Pizzaria Amor & Sabor. Todos os direitos reservados.
+  </footer>
+
+  <script>
+    const form = document.getElementById('registerForm');
+    const paymentSection = document.getElementById('paymentSection');
+
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      if(name && email && password) {
+        // Simula criação de conta
+        alert("Conta criada com sucesso, " + name + "!");
+        paymentSection.style.display = 'block';
+        form.reset();
+      }
+    });
+  </script>
+
+</body>
+</html>
